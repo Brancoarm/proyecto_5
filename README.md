@@ -34,7 +34,7 @@ cd proyecto_5
 npm install
 4. Inicia el servidor de desarrollo:
 npm run dev
-5. Abre tu navegador en http://localhost:3000 para ver la aplicación en funcionamiento.
+5. Abre tu navegador en http://localhost:5173 para ver la aplicación en funcionamiento.
 
 Configuración de la API:
 Para poder usar la API de Marvel, necesitarás una clave pública y una clave privada de Marvel:
