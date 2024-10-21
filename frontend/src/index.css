@@ -1,0 +1,190 @@
+/* Fondo estilo mosaico con sketch */
+body {
+  background-image: url('/sketch.png');
+  background-repeat: repeat;
+  background-size: contain;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 60px 30px; /* Asegurando espacio suficiente */
+  padding-top: 80px;  /* Más espacio hacia arriba para el logo */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  height: 80vh;
+}
+
+/* Logo de Marvel */
+.logo {
+  width: 200px;
+  margin-bottom: 20px;
+  margin-top: 10px; /* Asegura que no se pegue al borde */
+}
+
+/* Cuadro de búsqueda */
+.search-box {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  width: 300px;
+  margin-right: 10px;
+  outline: none;
+}
+
+/* Botón de búsqueda */
+button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff0000;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cc0000;
+}
+
+/* Resultados de cómics */
+.results-container {
+  width: 100%;
+  margin-top: 20px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+/* Estilos de cada resultado */
+.comic-result {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.comic-thumbnail {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.comic-info {
+  flex: 1;
+}
+
+/* Descripción del cómic */
+.comic-description {
+  text-align: justify; /* Alineación justificada para mejor distribución del texto */
+  max-width: 75%; /* Limitar el ancho del texto */
+  margin: 20px auto; /* Márgenes superior e inferior, y centrar el texto */
+  line-height: 1.8; /* Mayor espaciado entre líneas para legibilidad */
+  font-size: 1.1rem; /* Tamaño de fuente ajustado para mejor lectura */
+  color: #333; /* Color oscuro para una mejor legibilidad */
+}
+
+.comic-details {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Spinner */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Estilo para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .search-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .comic-thumbnail {
+    width: 80px;
+  }
+}
+
+/* Detalles de cada cómic */
+.comic-thumbnail-large {
+  max-width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción correcta de la imagen */
+  display: block;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/* Contenedor de detalles */
+.comic-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%; /* Ajusta el ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenido en la página */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Permitir el desplazamiento vertical */
+  height: 80vh; /* Asegurar que el contenedor ocupe el 80% de la ventana */
+}
+
+/* Permitir el desplazamiento global si el contenido es largo */
+html, body {
+  height: 100%;
+  overflow: auto; /* Asegura que la página completa sea desplazable */
+}
+.error-boundary-message {
+  background-color: #ff0000; /* Rojo intenso */
+  color: white; /* Texto en blanco */
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  max-width: 80%;
+  margin: 50px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar un efecto de elevación */
+}
+.no-results {
+  color: #333; /* Cambia esto al color que prefieras */
+  font-size: 1.2rem; /* Ajusta el tamaño del texto */
+  margin-top: 20px;
+  text-align: center; /* Centramos el texto */
+  width: 100%; /* Para asegurarnos de que ocupe todo el ancho del contenedor */
+}
