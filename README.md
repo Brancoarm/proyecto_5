@@ -43,6 +43,19 @@ Regístrate en el portal de desarrolladores de Marvel.
 Configura un servidor local que maneje la autenticación para las solicitudes a la API de Marvel.
 Asegúrate de que el backend de la aplicación maneje los parámetros necesarios (ts, hash, apikey) para autenticar correctamente las solicitudes a la API.
 
+## Configuración de la API de Marvel
+
+Para poder utilizar esta aplicación, es necesario registrarse en el [portal de desarrolladores de Marvel](https://developer.marvel.com/) y obtener una **clave pública** y una **clave privada**.
+
+### Paso 1: Configurar el archivo .env
+
+1. Crea un archivo `.env` en el directorio raíz de tu proyecto.
+2. Copia el contenido del archivo `.env.template` y reemplaza `tu_clave_publica` y `tu_clave_privada` con las claves proporcionadas por Marvel:
+
+        PUBLIC_KEY=tu_clave_publica
+        PRIVATE_KEY=tu_clave_privada
+
+
 Uso de la aplicación:
 Búsqueda: Escribe el nombre del cómic que deseas buscar en el cuadro de búsqueda.
 Ver detalles: Haz clic en "Ver Detalles" en cualquier cómic de la lista de resultados para ver más información.
